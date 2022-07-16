@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>留言板</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <style>
+        .pull-left
+        {
+            margin-left:800px;
+            margin-top:0px;
+        }
+        .pull-right
+        {
+        margin-right:700px;
+        }
+        body{
+            background: url("/static/img/img.jpeg") no-repeat center;
+        }
+        tr{
+        color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">猫咪领养救助系统</a></li>
+                <li><a href="/information">校园猫猫图鉴</a></li>
+                <li><a href="/center">校园猫猫领养中心</a></li>
+                <li><a href="https://baijiahao.baidu.com/s?id=1552364652907697&wfr=spider&for=pc">猫猫注意事项</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/bbs">给我们留言</a></li>
+                <li><a href="/adlogin">管理员入口</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">已登录<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/register">注册</a></li>
+                        <li><a href="/login">登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+    <div class="container-fluid clearfix">
+
+        <div class="col-md-7">
+            <center>
+        <h1 style="color:white;">留言列表</h1>
+        <h3 ><a style="color:white;" href="/bbs_add">发布留言</a></h3>
+        <table border="5" width="700" bordercolor="lightblue">
+            <tr>
+                <th>ID编号</th>
+                <th>昵称</th>
+                <th>留言信息</th>
+                <th>留言时间</th>
+
+            </tr>
+            {% for i in data%}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+        </div>
+
+
+        <div class="col-md-5">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">校园猫猫热点</h3>
+            </div>
+            <div class="panel-body">
+                近期情人坡附近出生一窝新的小猫
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">联系我们</div>
+            <div class="panel-body">
+                如数据有误，请在留言板留言或者通过10975830@163.com联系我们，十分感谢！
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">特别鸣谢</div>
+            <div class="panel-body">
+                重邮猫咪图鉴提供的数据,所有猫猫均在重邮校园内
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+</body>
+</html>

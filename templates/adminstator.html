@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>后台管理系统</title>
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 55px;
+            background-color: black;
+        }
+
+        .left {
+            position: absolute;
+            left: 20px;
+            font-size: 20px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+        .right {
+            position: absolute;
+            right: 160px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+        .right_right {
+            position: absolute;
+            right: 24px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+
+        .container-fluid {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+
+        .table-responsive {
+
+            margin-top: 10px;
+        }
+        tbody tr {
+            background-color: rgb(245, 245, 245);
+        }
+       body
+       {
+       background-image: url(../static/img/adm.jpeg);
+       }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ><a href="/adminstator">系统管理员变动</a></li>
+                <li><a href="/user_info">用户信息管理</a></li>
+                <li><a href="/cats_info">猫咪信息管理</a></li>
+                <li><a href="/application">领养申请处理</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/nav">退出登录</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+    <h1 class="sub-header">系统管理员变动系统</h1>&nbsp;&nbsp;
+    <div class="container-fluid">
+
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>管理员用户名<span>(限全字母的用户名)</span></th>
+                        <th>管理员密码<span>(限字母和数字组合的密码)</span></th>
+                        <th>选择(增加/修改/删除)管理员</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="" method="post">
+                            <td><input class="long" name="admin_name" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <!-- <td><input class="long" name="student_class" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td> -->
+                            <td><input class="long" name="admin_password" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><select name="selected_one">
+                                    <option value="增加管理员" selected="selected">增加管理员</option>
+                                    <option value="修改管理员密码">修改管理员密码</option>
+                                    <option value="删除管理员">删除管理员</option>
+                                </select></td>
+                            <td><input class="last" type="submit" value="操作" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><span>操作结果:{{insert_result}}</span></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>管理员用户名</th>
+                        <th>密码</th>
+                    </tr>
+                    {% for result in results %}
+                    <tr>
+                    <th>{{result[0]}}</th>
+                    <th>{{result[1]}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+
+</body>
+
+</html>

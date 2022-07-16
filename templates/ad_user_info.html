@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 55px;
+            background-color: black;
+        }
+
+        .left {
+            position: absolute;
+            left: 20px;
+            font-size: 20px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+        .right {
+            position: absolute;
+            right: 160px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+        .right_right {
+            position: absolute;
+            right: 24px;
+            line-height: 55px;
+            color: white;
+            text-align: center;
+        }
+
+        .container-fluid {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        /* .sub-header {
+            margin-top: 35px;
+        } */
+
+        .table-responsive {
+
+            margin-top: 10px;
+        }
+
+        /* .table-striped {
+
+            width: 1250px;
+        } */
+
+        thead tr th {
+            background-color: white;
+        }
+
+        tbody tr {
+            background-color: rgb(245, 245, 245);
+        }
+
+        tbody tr td .long {
+            width: 65px;
+            height: 30px;
+        }
+
+        tbody tr td .last {
+            height: 40px;
+            width: 60px;
+        }
+        tbody tr {
+            background-color: rgb(245, 245, 245);
+        }
+       body
+       {
+       background-image: url(../static/img/adm.jpeg);
+       }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ><a href="/adminstator">系统管理员变动</a></li>
+                <li><a href="/user_info">用户信息管理</a></li>
+                <li><a href="/cats_info">猫咪信息管理</a></li>
+                <li><a href="/application">领养申请处理</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/nav">退出登录</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+    <div class="container-fluid">
+        <h1 class="sub-header">用户信息管理系统</h1>&nbsp;&nbsp;
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>email</th>
+                        <th>姓名</th>
+                        <th>电话号码</th>
+                        <th>性别</th>
+                        <th>是否有过领养经历</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="" method="post">
+                            <td><input class="long" name="id" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="password" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="email" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="name" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="exp" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="number" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="long" name="sex" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input class="last" type="submit" value="查询" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><span>查询结果:{{insert_result}}</span></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td>用户名</td>
+                        <td>密码</td>
+                        <td>email</td>
+                        <td>姓名</td>
+                        <td>电话号码</td>
+                        <td>性别</td>
+                        <td>是否有过领养经历</td>
+                    </tr>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{result[0]}}</td>
+                        <td>{{result[1]}}</td>
+                        <td>{{result[2]}}</td>
+                        <td>{{result[3]}}</td>
+                        <td>{{result[4]}}</td>
+                        <td>{{result[5]}}</td>
+                        <td>{{result[6]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

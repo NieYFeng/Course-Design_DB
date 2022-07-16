@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <title>领养中心</title>
+</head>
+    <style>
+       .search-parent{
+            width: 60%;
+            height: 200px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+        .search-text{
+            width: auto;
+            height: 80px;
+            font-size: 50px;
+            margin: 0 auto;
+            color: #5E85AA;
+        }
+        .font-bold{
+            font-weight: bold;
+        }
+        .search-desc{
+            color: #5E85AA;
+        }
+        .search-info{
+            margin-top: 20px;
+            height: 80px;
+            padding: 15px;
+            background: #5E85AA;
+            border-radius: 20px;
+            border: 1px solid #AEAFB0;
+        }
+    </style>
+
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">猫咪领养救助系统</a></li>
+                <li><a href="/information">校园猫猫图鉴</a></li>
+                <li><a href="/center">校园猫猫领养中心</a></li>
+                <li><a href="/attention">猫猫注意事项</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/bbs_show">给我们留言</a></li>
+                <li><a href="/adlogin">管理员入口</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">已登录<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/register">注册</a></li>
+                        <li><a href="/login">登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<div class="search-parent">
+
+        <div class="search-text">
+            <span>重邮猫咪领养救助系统</span>
+        </div>
+
+        <div class="search-desc">
+            <span>你可以在这里查询你想领养的猫咪信息和领养情况 直接输入它的名字即可</span>
+        </div>
+
+        <div class="search-info">
+            <form class="navbar-form navbar-center" action="/centerdef">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="如：汽水" name="nickname">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+            </form>
+        </div>
+
+ </div>
+
+<div style="margin-top:70px">
+  <div class="row">
+    <div class="col-md-4"><table border="0">
+    <tr>
+        <td rowspan ="2">
+        <img src="/static/img/汽水.png" height="250" width="250"/></td><td>
+    <ul>
+        <li>名字:汽水</li>
+        <li>毛色:橘白</li>
+        <li>性别:公公</li>
+        <li>状况:健康 </li>
+        <li>绝育情况:未绝育 </li>
+        <li>性格:怕人，安全距离在1m以内</li>
+        <a class="btn btn-primary" href="/request" role="button">申请领养</a>
+    </ul>
+    </td>
+    </table></div>
+    <div class="col-md-4"><table border="0">
+    <tr>
+        <td rowspan ="2">
+        <img src="/static/img/高高.png" height="250" width="250"/></td><td>
+    <ul>
+        <li>名字:高高</li>
+        <li>毛色:橘猫</li>
+        <li>性别:母</li>
+        <li>状况:健康 </li>
+        <li>绝育情况:未绝育 </li>
+        <li>性格:喂熟了也不会让摸，只是胆子大了敢在身边蹲下</li>
+        <a class="btn btn-primary" href="/request" role="button">申请领养</a>
+    </ul>
+    </td>
+    </table></div>
+    <div class="col-md-4"><table border="0">
+    <tr>
+        <td rowspan ="2">
+        <img src="/static/img/奇奇.png" height="250" width="250"/></td><td>
+    <ul>
+        <li>名字:奇奇</li>
+        <li>毛色:橘色</li>
+        <li>性别:公公</li>
+        <li>状况:健康 </li>
+        <li>绝育情况:未绝育 </li>
+        <li>性格:亲人可抱，看起来很有礼貌的小猫</li>
+        <a class="btn btn-primary" href="/request" role="button">申请领养</a>
+    </ul>
+    </td>
+    </table></div>
+  </div>
+</div>
+
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+
+</body>
+</html>

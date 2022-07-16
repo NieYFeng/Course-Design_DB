@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <title>注册页面</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background: url("/static/img/administer.jpg") no-repeat center;
+        }
+        .rg_layout{
+            width: 900px;
+            height: 600px;
+            border: 8px solid #eeeeee;
+            background-color: white;
+            /* 让div水平居中 */
+            margin: auto;
+            margin-top: 15px;
+            /* padding: 15px; */
+        }
+        .rg_left{
+            /* border: 1px solid red; */
+            float: left;
+            margin: 15px;
+        }
+        .rg_left p:first-child{
+            color: #fed026;
+            size: 20px;
+        }
+        .rg_left p:last-child{
+            color: #a6a6a6;
+            size: 20px;
+        }
+        .rg_center{
+            width: 450px;
+
+            /* border: 1px solid red; */
+            float: left;
+        }
+        .rg_right{
+            /* border: 1px solid red; */
+            float: right;
+        }
+        .rg_right p:first-child{
+            /* color: #a6a6a6; */
+            font-size: 15px;
+        }
+        .rg_right p a{
+            color: pink;
+        }
+        .td_left{
+            width: 100px;
+            text-align: right;
+            height: 45px;
+            color: #a6a6a6;
+        }
+        .td_right{
+            padding-left: 50px;
+            color: #a6a6a6;
+        }
+        #username,#password,#email,#name,#tel,#birthday{
+            width: 251px;
+            height: 32px;
+            border: 1px solid #a6a6a6;
+            /* 设置边框圆角 */
+            border-radius: 5px;
+            padding-left: 10px;
+
+        }
+        #checkcode{
+            width: 150px;
+            height: 32px;
+            border: 1px solid #a6a6a6;
+            border-radius: 5px;
+            padding-left: 10px;
+
+        }
+        #btn_sub{
+            width: 150px;
+            height: 40px;
+            background-color: #ffd026;
+            border: 1px solid #a6a6a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">猫咪领养救助系统</a></li>
+                <li><a href="/information">校园猫猫图鉴</a></li>
+                <li><a href="/center">校园猫猫领养中心</a></li>
+                <li><a href="https://baijiahao.baidu.com/s?id=1552364652907697&wfr=spider&for=pc">猫猫注意事项</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/bbs">给我们留言</a></li>
+                <li><a href="#">管理员入口</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">登录/注册<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/register">注册</a></li>
+                        <li><a href="/login">登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+    <div class="rg_layout">
+        <div class = "rg_left">
+            <p>新用户注册</p>
+            <p>USER REGISTER</p>
+        </div>
+        <div class = "rg_center">
+            <div class="rg_form">
+                <!-- 定义表单 form-->
+                <form action="/rg" method="get">
+                    <table style = "border-collapse:separate; border-spacing:20px;">
+                        <tr>
+                            <td class="td_left"><label for="username"></label> 用户名</td>
+                            <td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="password"></label> 密码</td>
+                            <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="email"></label> email</td>
+                            <td class="td_right"><input type="email" name="email" id="email" placeholder="请输入email"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="name"></label> 姓名</td>
+                            <td class="td_right"><input type="text" name="name" id="name" placeholder="请输入姓名"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="number"></label> 手机号</td>
+                            <td class="td_right"><input type="text" name="number" id="number" placeholder="请输入手机号"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label>性别</label></td>
+                            <td class="td_right"><input type="text" name="sex" id="sex" placeholder="男/女"></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left">领养经历</label></td>
+                            <td class="td_right"><input type="text" name="exp"placeholder="有/无"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class = "rg_right">
+            <p>已有账号?&nbsp;  <a href="/login">&nbsp;立即登录&nbsp;</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+

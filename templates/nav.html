@@ -1,0 +1,164 @@
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>重邮猫咪领养救助系统</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .artscript
+        {
+            padding: 0;
+            padding-top: 60px;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 4px;
+        }
+
+        .artscript2
+        {
+            padding: 20;
+            padding-top: 100px;
+            color: white;
+            font-size: 10px;
+            padding-bottom: 0px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(../static/img/人和猫.jpeg);
+            /* background-image: url(./static/img/人和猫.jpeg); */
+            background-repeat: no-repeat;
+            /*这里的100% auto 表示将背景图片的长度100%显示，高度自适应*/
+            background-size: 100% auto;
+        }
+
+        #maxbox {
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 20px, 50px;
+            /*这里的90表示以不透明度90%显示*/
+            background-color: #00000090;
+            text-align: center;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        #maxbox h1 {
+            padding: 0;
+            padding-top: 60px;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 4px;
+            border-bottom: solid 1px white;
+        }
+
+        #maxbox h2 {
+            font-weight: 700;
+        }
+
+        #maxbox .inputbox {
+            margin-top: 30px;
+
+        }
+
+        #maxbox .inputText {
+            margin-top: 20px;
+
+        }
+
+        #maxbox .inputText span {
+            color: white;
+            font-size: 18px;
+
+
+        }
+
+        #maxbox .inputText input {
+            border: 0;
+            padding: 6px;
+            border-bottom: 1px solid white;
+            /*这里的00表示不透明度为0，即透明显示*/
+            background-color: #FFFFFF00;
+            color: white;
+        }
+
+        #maxbox .inputbox .inputButton {
+            margin: 0;
+            border: 0;
+            margin-top: 20px;
+            width: 145px;
+            height: 25px;
+            /*给这个按钮变为圆角边角*/
+            border-radius: 25px;
+            color: white;
+            background-color: #3498db;
+        }
+
+        #sign_up {
+            margin-top: 50px;
+            color: white;
+            font-size: 17px;
+        }
+
+        #sign_up a {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div><img src="/static/img/校徽.jpeg" alt=""height="35px";width="35px"></div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">猫咪领养救助系统</a></li>
+                <li><a href="/information">校园猫猫图鉴</a></li>
+                <li><a href="/center">校园猫猫领养中心</a></li>
+                <li><a href="/attention">猫猫注意事项</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/bbs_show">给我们留言</a></li>
+                <li><a href="/adlogin">管理员入口</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">已登录<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/register">注册</a></li>
+                        <li><a href="/login">登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<div class="artscript"><h1 class="container">重邮猫咪领养救助系统</h1></div>
+
+<span class="artscript2"><h2 class="container">动物是我们最好的朋友</h2></span>
+<span class="artscript2"><h2 class="container">我们致力于让没有家的它们感受到家的温暖</h2></span>
+
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+</body>
+</html>

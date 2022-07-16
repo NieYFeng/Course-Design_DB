@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>后台管理系统登陆</title>
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <style>
+        li {
+            list-style: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(../static/img/cat1.jpg);
+            /* background-image: url(./static/img/1.jpg); */
+            background-repeat: no-repeat;
+            /*这里的100% auto 表示将背景图片的长度100%显示，高度自适应*/
+            background-size: 100% auto;
+        }
+
+        #maxbox {
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 20px, 50px;
+            /*这里的90表示以不透明度90%显示*/
+            background-color: #00000090;
+            text-align: center;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        #maxbox h1 {
+            padding: 0;
+            padding-top: 60px;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 4px;
+            border-bottom: solid 1px white;
+        }
+
+        #maxbox h2 {
+            font-weight: 700;
+        }
+
+        #maxbox .inputbox {
+            margin-top: 30px;
+
+        }
+
+        #maxbox .inputText {
+            margin-top: 20px;
+
+        }
+
+        #maxbox .inputText span {
+            color: white;
+            font-size: 18px;
+
+
+        }
+
+        #maxbox .inputText input {
+            border: 0;
+            padding: 6px;
+            border-bottom: 1px solid white;
+            /*这里的00表示不透明度为0，即透明显示*/
+            background-color: #FFFFFF00;
+            color: white;
+        }
+
+        #maxbox .inputbox .inputButton {
+            margin: 0;
+            border: 0;
+            margin-top: 20px;
+            width: 145px;
+            height: 25px;
+            /*给这个按钮变为圆角边角*/
+            border-radius: 25px;
+            color: white;
+            background-color: #3498db;
+        }
+
+        #sign_up {
+            margin-top: 50px;
+            color: white;
+            font-size: 17px;
+        }
+
+        #sign_up a {
+            color: #3498db;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="maxbox">
+        <h1>管理员后台管理系统</h1>
+        <h2>Please sign in</h2>
+        <div class="inputbox">
+            <form name="frm" action="adlogin" method="post">
+                <div class="inputText">
+                    <span class="iconfont icon-mine"></span>
+                    <input class="username" type="text" placeholder="admin_name" name="user" style="color:while" />
+                </div>
+                <div class="inputText">
+                    <span class="iconfont icon-lock"></span>
+                    <input type="password" placeholder="Password" name="pwd" style="color:white" />
+                    <br>
+                </div>
+                <input class="inputButton" type="submit" value="Sign in" />
+            </form>
+            <div style="color: white">{{msg}}</div>
+        </div>
+    </div>
+</body>
+
+</html>
